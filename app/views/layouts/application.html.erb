@@ -1,8 +1,15 @@
 <html>
 <head>
   <Title>Title TODO </Title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= render('layouts/css') %>
+  <%= render('layouts/javascript') %>
 </head>
 <body>
-    <%= yield %>
+    <%= render('layouts/nav') %>
+    <div class="main-content">
+        <%= yield %>
+    </div>
+
 </body>
 </html>

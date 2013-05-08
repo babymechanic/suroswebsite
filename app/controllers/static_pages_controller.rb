@@ -1,7 +1,7 @@
 class StaticPagesController  < ActionController::Base
 
   def home
-    render
+    render :layout => 'application'
   end
 
 end
