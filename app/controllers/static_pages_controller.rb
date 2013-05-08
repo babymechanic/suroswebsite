@@ -13,7 +13,7 @@ class StaticPagesController  < ActionController::Base
   private
 
   def get_body_for_slug(slug_name)
-    Refinery::Page.where("slug = '#{slug_name}'")[0]
+    Refinery::Page.where("slug in ('#{slug_name}','#{slug_name}-page' )")[0]
                   .parts
                   .find{|x|x.title.downcase == 'body'}
                   .body
