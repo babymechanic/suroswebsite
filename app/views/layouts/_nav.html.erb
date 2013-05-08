@@ -3,17 +3,17 @@
     <div class="navbar-inner">
       <a class="brand" href="#">My Blog</a>
       <ul class="nav pull-right">
-        <li class="active">
+        <li class='<%= "#{page_on_named_route?(:home_page) ? 'active' : '' }"%>'>
           <a id="home-page-nav-link" href="/">Home</a>
         </li>
-        <li class="dropdown">
+        <li class='dropdown <%= "#{page_on_any_named_route([:projects_all]) ? 'active' : '' }"%>'>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             My Work
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a id="projects-nav-link" href="#">Projects</a>
+              <a id="projects-nav-link" href="/projects">Projects</a>
             </li>
             <li>
               <a id="clients-nav-link" href="#">Clients</a>
@@ -29,8 +29,8 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#">Contact Details</a>
+        <li class='<%= "#{page_on_named_route?(:contact_details) ? 'active' : '' }"%>'>
+          <a href="/contact-details">Contact Details</a>
         </li>
 
       </ul>

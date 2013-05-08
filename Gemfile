@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'jquery-rails', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password

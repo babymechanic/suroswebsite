@@ -6,7 +6,9 @@ Suroswebsite::Application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
 
-  match '/' => 'static_pages#home'
+  match '/' => 'static_pages#home' ,  :as => :home_page
+  match '/contact-details' => 'static_pages#contact_details', :as => :contact_details
+  match '/projects' => 'projects#index', :as => :projects_all
 
   mount Refinery::Core::Engine, :at => '/'
 

@@ -1,0 +1,10 @@
+.contact-details{
+    text-align: center;
+}
+
+.inner-contact-details{
+    margin: auto;
+    display: inline-block;
+    text-align: left;
+}
+
