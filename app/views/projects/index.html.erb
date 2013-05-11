@@ -1,14 +1,18 @@
 
 <div>
-  <ul class="projects">
+  <ul id="page-display-area" class="projects"  data-bind="foreach: items" data-url="/projects">
     <% @projects.each do |project| %>
         <li>
           <div class="thumbnail">
-            <img data-src="holder.js/300x200" class="span4" alt="" src="<%= project.thumbnail.present? ? project.thumbnail.url : '' %>">
+            <img data-src="holder.js/300x200" class="span4" alt="" src="<%= project.thumbnail.present? ? project.thumbnail.url : '' %>" data-bind="attr: { src: thumbnailUrl }">
 
             <div class="caption">
-              <h3><%= project.name.html_safe %></h3>
-              <p><%= project.description.html_safe %></p>
+              <h3 data-bind="text: name">
+                <%= project.name.html_safe %>
+              </h3>
+              <div data-bind="html: description">
+                    <%= project.description.html_safe %>
+              </div>
               <p class="pull-right">
                 <a href="#" class="btn btn-primary">More Details</a>
                 <!--<a href="#" class="btn">Action</a>-->
@@ -19,18 +23,16 @@
     <% end %>
   </ul>
 
-  <div class="pagination pagination-large">
+  <div id="pagination-control" class="pagination pagination-large" data-total-pages="<%= @total_pages %>" >
     <ul>
       <li class="<%= @current_page == 1 ? 'disabled' : '' %>">
-        <a href="#">Prev</a>
+        <a id="previous_page_button" href="#">Prev</a>
       </li>
-      <% (1..@total_pages).each do |page_number| %>
-          <li class="<%= page_number == @current_page? 'disabled' : '' %>">
-            <a href="#" ><%= page_number%></a>
-          </li>
-      <% end %>
+      <li class="disabled">
+        <a id="current-page" href="#" ><%= @current_page%></a>
+      </li>
       <li class="<%= @total_pages == @current_page? 'disabled' : '' %>">
-        <a href="#">Next</a>
+        <a id="next_page_button" href="#">Next</a>
       </li>
     </ul>
   </div>

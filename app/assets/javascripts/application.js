@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min.js
+//= require knockout-2.2.1.js
 //= require_tree .
