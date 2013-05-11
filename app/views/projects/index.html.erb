@@ -1,16 +1,22 @@
 
 <div>
   <ul class="projects">
-    <li>
-      <div class="thumbnail">
-        <img data-src="holder.js/300x200" class="span4" alt="" src="assets/suros_pics/suro1.jpg">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p class="pull-right"><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
-        </div>
-      </div>
-    </li>
+    <% @projects.each do |project| %>
+        <li>
+          <div class="thumbnail">
+            <img data-src="holder.js/300x200" class="span4" alt="" src="<%= project.thumbnail.present? ? project.thumbnail.url : '' %>">
+
+            <div class="caption">
+              <h3><%= project.name.html_safe %></h3>
+              <p><%= project.description.html_safe %></p>
+              <p class="pull-right">
+                <a href="#" class="btn btn-primary">More Details</a>
+                <!--<a href="#" class="btn">Action</a>-->
+              </p>
+            </div>
+          </div>
+        </li>
+    <% end %>
   </ul>
 
   <div class="pagination pagination-large">
