@@ -3,7 +3,7 @@
     display: table;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .projects li .thumbnail{
@@ -21,4 +21,5 @@
 
 .pagination{
     text-align: center;
+    margin: 40px 0px 0px 0px;
 }
