@@ -25,14 +25,14 @@
 
   <div id="pagination-control" class="pagination pagination-large" data-total-pages="<%= @total_pages %>" >
     <ul>
-      <li class="<%= @current_page == 1 ? 'disabled' : '' %>">
-        <a id="previous_page_button" href="#">Prev</a>
+      <li id="previous_page_button" class="<%= @current_page == 1 ? 'disabled' : '' %>">
+        <a  href="#">Prev</a>
       </li>
       <li class="disabled">
         <a id="current-page" href="#" ><%= @current_page%></a>
       </li>
-      <li class="<%= @total_pages == @current_page? 'disabled' : '' %>">
-        <a id="next_page_button" href="#">Next</a>
+      <li id="next_page_button" class="<%= @total_pages == @current_page? 'disabled' : '' %>">
+        <a href="#">Next</a>
       </li>
     </ul>
   </div>

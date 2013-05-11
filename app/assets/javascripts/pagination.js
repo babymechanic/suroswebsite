@@ -9,7 +9,7 @@ surosSite.pageDisplayControl = function(){
         return $('#page-display-area').attr('data-url');
     };
 
-    control.getPage = function(pageNumber){
+    control.getPage = function(pageNumber,onNewPageDisplayed){
         init();
         var url = urlToGetItems() + "?page=" + pageNumber;
         $.ajax({
@@ -21,6 +21,7 @@ surosSite.pageDisplayControl = function(){
                 $.each(data,function(index,item){
                     arrayOfItems.push(item);
                 });
+                onNewPageDisplayed();
             }
         });
     };
@@ -80,6 +81,19 @@ surosSite.paginationControl.view = function(){
       return parseInt(paginationControl().attr('data-total-pages'));
   };
 
+  view.updatePaginationControls = function(newPageNumber){
+      if(newPageNumber == view.lastPageNumber()) {
+          nextButton().addClass('disabled');
+      }else{
+          nextButton().removeClass('disabled');
+      }
+      if(newPageNumber == 1) {
+          previousButton().addClass('disabled');
+      }else{
+          previousButton().removeClass('disabled');
+      }
+      currentPageButton().html(newPageNumber);
+  };
 
   view.init = function(){
     nextButton().click(function(){
@@ -98,18 +112,28 @@ surosSite.paginationControl.controller = function(){
     var controller = {};
     var view = surosSite.paginationControl.view;
 
+    var afterDisplayingNewPage = function(newPageNumber){
+        view.updatePaginationControls(newPageNumber);
+    };
+
     var onGetPrevious  = function(e){
         if(view.currentPageNumber() == 1) {
             return;
         }
-        surosSite.pageDisplayControl.getPage(view.currentPageNumber() - 1);
+        var pageToDisplay = view.currentPageNumber() - 1;
+        surosSite.pageDisplayControl.getPage(pageToDisplay,function(){
+            afterDisplayingNewPage(pageToDisplay);
+        });
     };
 
     var onGetNext  = function(e){
         if(view.currentPageNumber() == view.lastPageNumber()) {
             return;
         }
-        surosSite.pageDisplayControl.getPage(view.currentPageNumber() + 1);
+        var pageToDisplay = view.currentPageNumber() + 1;
+        surosSite.pageDisplayControl.getPage(pageToDisplay,function(){
+            afterDisplayingNewPage(pageToDisplay);
+        });
     };
 
     controller.init = function(){
