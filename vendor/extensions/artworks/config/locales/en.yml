@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Add New Artwork
+            reorder: Reorder Artworks
+            reorder_done: Done Reordering Artworks
+          records:
+            title: Artworks
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Artworks yet. Click "Add New Artwork" to add your first artwork.
+          artwork:
+            view_live_html: View this artwork live <br/><em>(opens in a new window)</em>
+            edit: Edit this artwork
+            delete: Remove this artwork forever
+      artworks:
+        show:
+          other: Other Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

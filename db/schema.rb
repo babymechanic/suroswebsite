@@ -11,7 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130508131055) do
+ActiveRecord::Schema.define(:version => 20130511122323) do
+
+  create_table "refinery_artworks", :force => true do |t|
+    t.string   "name"
+    t.integer  "thumbnail_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "refinery_clients", :force => true do |t|
+    t.string   "name"
+    t.integer  "logo_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_exhibitions", :force => true do |t|
+    t.string   "name"
+    t.integer  "thumbnail_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -109,6 +136,23 @@ ActiveRecord::Schema.define(:version => 20130508131055) do
   add_index "refinery_pages", ["parent_id"], :name => "index_refinery_pages_on_parent_id"
   add_index "refinery_pages", ["rgt"], :name => "index_refinery_pages_on_rgt"
 
+  create_table "refinery_presses", :force => true do |t|
+    t.string   "name"
+    t.integer  "thumbnail_id"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "refinery_projects", :force => true do |t|
+    t.string   "name"
+    t.integer  "thumbnail_id"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
@@ -157,6 +201,16 @@ ActiveRecord::Schema.define(:version => 20130508131055) do
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+
+  create_table "refinery_videos", :force => true do |t|
+    t.string   "name"
+    t.integer  "thumbnail_id"
+    t.text     "description"
+    t.string   "yourtube_id"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"

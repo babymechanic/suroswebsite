@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Presses::Admin::PressesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.presses_admin_presses_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_presses_admin_press_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Presses::Admin::PressesController.sortable? && ::Refinery::Presses::Press.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Presses"),
+                 refinery.presses_admin_presses_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Presses"),
+                 refinery.presses_admin_presses_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

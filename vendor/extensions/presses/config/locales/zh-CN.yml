@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      presses:
+        title: Presses
+    presses:
+      admin:
+        presses:
+          actions:
+            create_new: 建立新的 Press
+            reorder: 对 Presses 重新排序
+            reorder_done: 对 Presses 的重新排序结束
+          records:
+            title: Presses
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Presses yet. Click "Add New Press" to add your first press.
+            no_items_yet: 目前没有 Presses . 点击 "Add New Press" 创建一个press.
+          press:
+            view_live_html: 查看 press 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 press
+            delete: 永久删除 press
+      presses:
+        show:
+          other: 其他 Presses
+  activerecord:
+    attributes:
+      'refinery/presses/press':
+        name: Name
+        thumbnail: Thumbnail

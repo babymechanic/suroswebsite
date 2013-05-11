@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      presses:
+        title: Presses
+    presses:
+      admin:
+        presses:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Press
+            reorder: Réordonner les Presses
+            reorder_done: Fin de réordonnancement des Presses
+          records:
+            title: Presses
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Press. Cliquer sur "Créer un(e) nouve(au/l/lle) Press" pour créer votre premi(er/ère) press.'
+          press:
+            view_live_html: Voir ce(t/tte) press <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) press
+            delete: Supprimer définitivement ce(t/tte) press
+      presses:
+        show:
+          other: Autres Presses
+  activerecord:
+    attributes:
+      'refinery/presses/press':
+        name: Name
+        thumbnail: Thumbnail

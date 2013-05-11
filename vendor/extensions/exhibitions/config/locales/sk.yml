@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      exhibitions:
+        title: Exhibitions
+    exhibitions:
+      admin:
+        exhibitions:
+          actions:
+            create_new: Pridať Exhibition
+            reorder: Preusporiadať Exhibitions
+            reorder_done: Koniec radenia Exhibitions
+          records:
+            title: Exhibitions
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Exhibitions. Kliknite na "Pridať Exhibition" pre pridanie prvého exhibition.
+          exhibition:
+            view_live_html: Zobraziť náhľad exhibition<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť exhibition
+            delete: Zmazať exhibition
+      exhibitions:
+        show:
+          other: Daľšie Exhibitions
+  activerecord:
+    attributes:
+      'refinery/exhibitions/exhibition':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

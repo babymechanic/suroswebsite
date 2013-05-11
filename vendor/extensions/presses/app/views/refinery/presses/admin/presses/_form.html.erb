@@ -1,0 +1,27 @@
+<%= form_for [refinery, :presses_admin, @press] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @press,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :thumbnail -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :thumbnail_id,
+               :image => @press.thumbnail,
+               :toggle_image_display => false %>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.presses.admin.presses.press'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @press.name) %>
+<% end -%>

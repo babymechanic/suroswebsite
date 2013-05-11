@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: 建立新的 Artwork
+            reorder: 对 Artworks 重新排序
+            reorder_done: 对 Artworks 的重新排序结束
+          records:
+            title: Artworks
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Artworks yet. Click "Add New Artwork" to add your first artwork.
+            no_items_yet: 目前没有 Artworks . 点击 "Add New Artwork" 创建一个artwork.
+          artwork:
+            view_live_html: 查看 artwork 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 artwork
+            delete: 永久删除 artwork
+      artworks:
+        show:
+          other: 其他 Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      presses:
+        title: Presses
+    presses:
+      admin:
+        presses:
+          actions:
+            create_new: Add New Press
+            reorder: Reorder Presses
+            reorder_done: Done Reordering Presses
+          records:
+            title: Presses
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Presses yet. Click "Add New Press" to add your first press.
+          press:
+            view_live_html: View this press live <br/><em>(opens in a new window)</em>
+            edit: Edit this press
+            delete: Remove this press forever
+      presses:
+        show:
+          other: Other Presses
+  activerecord:
+    attributes:
+      'refinery/presses/press':
+        name: Name
+        thumbnail: Thumbnail

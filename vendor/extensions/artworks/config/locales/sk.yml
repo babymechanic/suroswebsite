@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Pridať Artwork
+            reorder: Preusporiadať Artworks
+            reorder_done: Koniec radenia Artworks
+          records:
+            title: Artworks
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Artworks. Kliknite na "Pridať Artwork" pre pridanie prvého artwork.
+          artwork:
+            view_live_html: Zobraziť náhľad artwork<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť artwork
+            delete: Zmazať artwork
+      artworks:
+        show:
+          other: Daľšie Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

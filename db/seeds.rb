@@ -8,3 +8,21 @@
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Clients extension
+Refinery::Clients::Engine.load_seed
+
+# Added by Refinery CMS Projects extension
+Refinery::Projects::Engine.load_seed
+
+# Added by Refinery CMS Artworks extension
+Refinery::Artworks::Engine.load_seed
+
+# Added by Refinery CMS Exhibitions extension
+Refinery::Exhibitions::Engine.load_seed
+
+# Added by Refinery CMS Videos extension
+Refinery::Videos::Engine.load_seed
+
+# Added by Refinery CMS Presses extension
+Refinery::Presses::Engine.load_seed

@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Maak een nieuwe Artwork
+            reorder: Wijzig de volgorde van de Artworks
+            reorder_done: Klaar met het wijzingen van de volgorde van de Artworks
+          records:
+            title: Artworks
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Artworks. Druk op 'Maak een nieuwe Artwork' om de eerste aan te maken.
+          artwork:
+            view_live_html: Bekijk deze artwork op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze artwork
+            delete: Verwijder deze artwork voor eeuwig
+      artworks:
+        show:
+          other: Andere Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      exhibitions:
+        title: Exhibitions
+#        article: masculino/femenino
+    exhibitions:
+      admin:
+        exhibitions:
+          actions:
+            create_new: Crear nuevo exhibition
+            reorder: Reordenar exhibitions
+            reorder_done: Reordenación de exhibitions completada
+          records:
+            title: Exhibitions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay exhibitions todavía. Pulsa en "Crear nuevo Exhibition" para crear tu primer exhibition.
+          exhibition:
+            view_live_html: Ver este exhibition como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este exhibition
+            delete: Borrar este exhibition para siempre
+      exhibitions:
+        show:
+          other: Otros exhibitions
+  activerecord:
+    attributes:
+      'refinery/exhibitions/exhibition':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

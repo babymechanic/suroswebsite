@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Artwork
+            reorder: Réordonner les Artworks
+            reorder_done: Fin de réordonnancement des Artworks
+          records:
+            title: Artworks
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Artwork. Cliquer sur "Créer un(e) nouve(au/l/lle) Artwork" pour créer votre premi(er/ère) artwork.'
+          artwork:
+            view_live_html: Voir ce(t/tte) artwork <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) artwork
+            delete: Supprimer définitivement ce(t/tte) artwork
+      artworks:
+        show:
+          other: Autres Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

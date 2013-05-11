@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+#        article: masculino/femenino
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Crear nuevo artwork
+            reorder: Reordenar artworks
+            reorder_done: Reordenación de artworks completada
+          records:
+            title: Artworks
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay artworks todavía. Pulsa en "Crear nuevo Artwork" para crear tu primer artwork.
+          artwork:
+            view_live_html: Ver este artwork como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este artwork
+            delete: Borrar este artwork para siempre
+      artworks:
+        show:
+          other: Otros artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

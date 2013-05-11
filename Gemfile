@@ -38,3 +38,10 @@ gem 'jquery-rails', '~> 2.0.0'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'refinerycms-clients', :path => 'vendor/extensions'
+gem 'refinerycms-projects', :path => 'vendor/extensions'
+gem 'refinerycms-artworks', :path => 'vendor/extensions'
+gem 'refinerycms-exhibitions', :path => 'vendor/extensions'
+gem 'refinerycms-videos', :path => 'vendor/extensions'
+gem 'refinerycms-presses', :path => 'vendor/extensions'

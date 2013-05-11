@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      presses:
+        title: Presses
+    presses:
+      admin:
+        presses:
+          actions:
+            create_new: Maak een nieuwe Press
+            reorder: Wijzig de volgorde van de Presses
+            reorder_done: Klaar met het wijzingen van de volgorde van de Presses
+          records:
+            title: Presses
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Presses. Druk op 'Maak een nieuwe Press' om de eerste aan te maken.
+          press:
+            view_live_html: Bekijk deze press op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze press
+            delete: Verwijder deze press voor eeuwig
+      presses:
+        show:
+          other: Andere Presses
+  activerecord:
+    attributes:
+      'refinery/presses/press':
+        name: Name
+        thumbnail: Thumbnail

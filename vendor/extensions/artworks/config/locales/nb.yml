@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      artworks:
+        title: Artworks
+    artworks:
+      admin:
+        artworks:
+          actions:
+            create_new: Lag en ny Artwork
+            reorder: Endre rekkefølgen på Artworks
+            reorder_done: Ferdig å endre rekkefølgen Artworks
+          records:
+            title: Artworks
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Artworks enda. Klikk på "Lag en ny Artwork" for å legge til din første artwork.
+          artwork:
+            view_live_html: Vis hvordan denne artwork ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne artwork
+            delete: Fjern denne artwork permanent
+      artworks:
+        show:
+          other: Andre Artworks
+  activerecord:
+    attributes:
+      'refinery/artworks/artwork':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

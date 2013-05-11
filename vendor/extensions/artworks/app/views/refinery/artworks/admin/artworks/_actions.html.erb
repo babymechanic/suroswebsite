@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Artworks::Admin::ArtworksController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.artworks_admin_artworks_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_artworks_admin_artwork_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Artworks::Admin::ArtworksController.sortable? && ::Refinery::Artworks::Artwork.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Artworks"),
+                 refinery.artworks_admin_artworks_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Artworks"),
+                 refinery.artworks_admin_artworks_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

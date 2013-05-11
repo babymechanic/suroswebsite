@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      presses:
+        title: Presses
+#        article: masculino/femenino
+    presses:
+      admin:
+        presses:
+          actions:
+            create_new: Crear nuevo press
+            reorder: Reordenar presses
+            reorder_done: Reordenación de presses completada
+          records:
+            title: Presses
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay presses todavía. Pulsa en "Crear nuevo Press" para crear tu primer press.
+          press:
+            view_live_html: Ver este press como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este press
+            delete: Borrar este press para siempre
+      presses:
+        show:
+          other: Otros presses
+  activerecord:
+    attributes:
+      'refinery/presses/press':
+        name: Name
+        thumbnail: Thumbnail

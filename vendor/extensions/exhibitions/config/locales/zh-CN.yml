@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      exhibitions:
+        title: Exhibitions
+    exhibitions:
+      admin:
+        exhibitions:
+          actions:
+            create_new: 建立新的 Exhibition
+            reorder: 对 Exhibitions 重新排序
+            reorder_done: 对 Exhibitions 的重新排序结束
+          records:
+            title: Exhibitions
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Exhibitions yet. Click "Add New Exhibition" to add your first exhibition.
+            no_items_yet: 目前没有 Exhibitions . 点击 "Add New Exhibition" 创建一个exhibition.
+          exhibition:
+            view_live_html: 查看 exhibition 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 exhibition
+            delete: 永久删除 exhibition
+      exhibitions:
+        show:
+          other: 其他 Exhibitions
+  activerecord:
+    attributes:
+      'refinery/exhibitions/exhibition':
+        name: Name
+        thumbnail: Thumbnail
+        description: Description

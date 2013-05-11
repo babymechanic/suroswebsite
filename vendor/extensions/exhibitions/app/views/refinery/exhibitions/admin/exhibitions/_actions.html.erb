@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Exhibitions::Admin::ExhibitionsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.exhibitions_admin_exhibitions_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_exhibitions_admin_exhibition_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Exhibitions::Admin::ExhibitionsController.sortable? && ::Refinery::Exhibitions::Exhibition.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Exhibitions"),
+                 refinery.exhibitions_admin_exhibitions_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Exhibitions"),
+                 refinery.exhibitions_admin_exhibitions_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
