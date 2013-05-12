@@ -27,7 +27,7 @@
     <li class="disabled">
       <a id="current-page" href="#" ><%= @current_page%></a>
     </li>
-    <li id="next_page_button" class="<%= @total_pages == @current_page? 'disabled' : '' %>">
+    <li id="next_page_button" class="<%= @total_pages == @current_page  || @total_pages == 0      ? 'disabled' : '' %>">
       <a href="#">Next</a>
     </li>
   </ul>

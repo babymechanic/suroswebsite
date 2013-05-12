@@ -147,7 +147,7 @@ surosSite.paginationControl.controller = function(){
     };
 
     var onGetNext  = function(e){
-        if(view.currentPageNumber() == view.lastPageNumber()) {
+        if(view.currentPageNumber() == view.lastPageNumber() || view.lastPageNumber() == 0 ) {
             return;
         }
         var pageToDisplay = view.currentPageNumber() + 1;
