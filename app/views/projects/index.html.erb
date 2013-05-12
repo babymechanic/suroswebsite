@@ -1,26 +1,20 @@
 
 <div class="min-height-for-items">
-  <ul id="page-display-area" class="projects"  data-bind="foreach: items" data-url="/projects">
-    <% @projects.each do |project| %>
-        <li>
-          <div class="thumbnail">
-            <img data-src="holder.js/300x200" class="span4" alt="" src="<%= project.thumbnail.present? ? project.thumbnail.url : '' %>" data-bind="attr: { src: thumbnailUrl }">
-
-            <div class="caption">
-              <h3 data-bind="text: name">
-                <%= project.name.html_safe %>
-              </h3>
-              <div data-bind="html: description">
-                    <%= project.description.html_safe %>
-              </div>
-              <p class="pull-right">
-                <a href="#" class="btn btn-primary">More Details</a>
-                <!--<a href="#" class="btn">Action</a>-->
-              </p>
-            </div>
+  <ul id="page-display-area" class="projects"  data-bind="foreach: items" data-url="/projects" data-items="<%= @projects_json %>">
+    <li>
+      <div class="thumbnail">
+        <img data-src="holder.js/300x200" class="span4" alt="" src="" data-bind="attr: { src: thumbnailUrl }">
+        <div class="caption">
+          <h3 data-bind="text: name">
+          </h3>
+          <div data-bind="html: description">
           </div>
-        </li>
-    <% end %>
+          <p class="pull-right">
+            <a href="#" class="btn btn-primary">More Details</a>
+          </p>
+        </div>
+      </div>
+    </li>
   </ul>
 
 

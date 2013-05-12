@@ -5,22 +5,27 @@ surosSite.pageDisplayControl = function(){
     var arrayOfItems = ko.observableArray([]);
     var wasInitialized = false;
 
+    var pageDisplayArea = function(){
+        return $('#page-display-area');
+    };
+
     var urlToGetItems = function(){
-        return $('#page-display-area').attr('data-url');
+        return pageDisplayArea().attr('data-url');
     };
 
     var showOverLay = function(){
-        $('#overlay').fadeIn();
+        $('#overlay').fadeIn('slow');
     };
 
     var hideOverLay = function(){
-        $('#overlay').fadeOut();
+        $('#overlay').fadeOut('slow');
     };
 
-
+    var getJsonDataFromTag = function(){
+        return $.parseJSON(pageDisplayArea().attr('data-items'));
+    };
 
     control.getPage = function(pageNumber,onNewPageDisplayed){
-        init();
         showOverLay();
         var url = urlToGetItems() + "?page=" + pageNumber;
         $.ajax({
@@ -38,10 +43,13 @@ surosSite.pageDisplayControl = function(){
         });
     };
 
-    var init = function(){
+    control.init = function(){
         if(!wasInitialized){
+            $.each(getJsonDataFromTag(),function(index,item){
+                arrayOfItems.push(item);
+            });
             ko.applyBindings({
-                items:arrayOfItems
+                items: arrayOfItems
             });
         }
     };
@@ -159,4 +167,5 @@ surosSite.paginationControl.controller = function(){
 $(document).ready(function(){
     surosSite.paginationControl.view.init();
     surosSite.paginationControl.controller.init();
+    surosSite.pageDisplayControl.init();
 });
