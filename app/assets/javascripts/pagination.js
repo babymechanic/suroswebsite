@@ -9,8 +9,19 @@ surosSite.pageDisplayControl = function(){
         return $('#page-display-area').attr('data-url');
     };
 
+    var showOverLay = function(){
+        $('#overlay').show();
+    };
+
+    var hideOverLay = function(){
+        $('#overlay').hide();
+    };
+
+
+
     control.getPage = function(pageNumber,onNewPageDisplayed){
         init();
+        showOverLay();
         var url = urlToGetItems() + "?page=" + pageNumber;
         $.ajax({
             url: url,
@@ -22,6 +33,7 @@ surosSite.pageDisplayControl = function(){
                     arrayOfItems.push(item);
                 });
                 onNewPageDisplayed();
+                hideOverLay();
             }
         });
     };

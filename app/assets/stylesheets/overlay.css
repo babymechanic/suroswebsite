@@ -1,0 +1,30 @@
+.overlay
+{
+    background-color: #000;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    text-align: center;
+}
+
+.overlay div .progress{
+    width: 400px;
+    margin: auto;
+}
+
+.overlay-floater{
+    /*float:left;*/
+    height:50%;
+    margin-bottom:0px;
+}
+
+.overlay-content{
+    clear:both;
+    position:relative;
+}
