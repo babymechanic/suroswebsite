@@ -10,11 +10,11 @@ surosSite.pageDisplayControl = function(){
     };
 
     var showOverLay = function(){
-        $('#overlay').show();
+        $('#overlay').fadeIn();
     };
 
     var hideOverLay = function(){
-        $('#overlay').hide();
+        $('#overlay').fadeOut();
     };
 
 

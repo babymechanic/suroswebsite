@@ -1,5 +1,5 @@
 
-<div>
+<div class="min-height-for-items">
   <ul id="page-display-area" class="projects"  data-bind="foreach: items" data-url="/projects">
     <% @projects.each do |project| %>
         <li>
@@ -23,17 +23,18 @@
     <% end %>
   </ul>
 
-  <div id="pagination-control" class="pagination pagination-large" data-total-pages="<%= @total_pages %>" >
-    <ul>
-      <li id="previous_page_button" class="<%= @current_page == 1 ? 'disabled' : '' %>">
-        <a  href="#">Prev</a>
-      </li>
-      <li class="disabled">
-        <a id="current-page" href="#" ><%= @current_page%></a>
-      </li>
-      <li id="next_page_button" class="<%= @total_pages == @current_page? 'disabled' : '' %>">
-        <a href="#">Next</a>
-      </li>
-    </ul>
-  </div>
+
+</div>
+<div id="pagination-control" class="pagination pagination-large" data-total-pages="<%= @total_pages %>" >
+  <ul>
+    <li id="previous_page_button" class="<%= @current_page == 1 ? 'disabled' : '' %>">
+      <a  href="#">Prev</a>
+    </li>
+    <li class="disabled">
+      <a id="current-page" href="#" ><%= @current_page%></a>
+    </li>
+    <li id="next_page_button" class="<%= @total_pages == @current_page? 'disabled' : '' %>">
+      <a href="#">Next</a>
+    </li>
+  </ul>
 </div>
