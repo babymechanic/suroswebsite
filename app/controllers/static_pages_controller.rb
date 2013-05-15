@@ -2,6 +2,7 @@ class StaticPagesController  < ActionController::Base
 
   def home
     @about = get_body_for_slug 'about'
+    @technical_skills = get_body_for_slug 'technical-skills'
     render :layout => 'application'
   end
 
@@ -17,6 +18,7 @@ class StaticPagesController  < ActionController::Base
                   .parts
                   .find{|x|x.title.downcase == 'body'}
                   .body
+                  .html_safe
   end
 
 end
