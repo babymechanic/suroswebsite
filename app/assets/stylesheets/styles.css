@@ -10,3 +10,8 @@ body{
     margin-right: auto;
     margin-bottom: 15px;
 }
+
+.half-width{
+    width: 50%;
+    float: left;
+}
