@@ -9,6 +9,7 @@ Suroswebsite::Application.routes.draw do
   match '/' => 'static_pages#home' ,  :as => :home_page
   match '/contact-details' => 'static_pages#contact_details', :as => :contact_details
   match '/projects' => 'projects#index', :as => :projects_all
+  match '/projects/:project_id' => 'projects#show', :as => :project_show
   match '/clients' => 'clients#index', :as => :clients_all
   match '/artwork' => 'artwork#index', :as => :artwork_all
   match '/exhibitions' => 'exhibitions#index', :as => :exhibitions_all

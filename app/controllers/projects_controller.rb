@@ -11,6 +11,11 @@ class ProjectsController < ActionController::Base
     end
   end
 
+  def show
+    @project = Refinery::Projects::Project.where("id = #{params[:project_id]}").first
+    render :layout => 'application'
+  end
+
   private
       def get_projects_as_json(page_number)
         projects_for = projects_for page_number
@@ -19,7 +24,8 @@ class ProjectsController < ActionController::Base
           projects_in_json.push({
                                     thumbnailUrl: project.thumbnail.present? ? project.thumbnail.url : '',
                                     name: project.name.html_safe,
-                                    description: project.description.html_safe
+                                    description: project.description.html_safe,
+                                    url: "/projects/#{project.id}"
                                 })
         end
         projects_in_json.to_json

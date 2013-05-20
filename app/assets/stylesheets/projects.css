@@ -31,3 +31,8 @@
 .min-height-for-items{
     min-height: 780px;
 }
+
+.project-display{
+    max-width: 800px;
+    float: left;
+}

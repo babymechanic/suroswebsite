@@ -10,15 +10,14 @@
           <div data-bind="html: description">
           </div>
           <p class="pull-right">
-            <a href="#" class="btn btn-primary">More Details</a>
+            <a data-bind="attr: { href: url}" class="btn btn-primary">More Details</a>
           </p>
         </div>
       </div>
     </li>
   </ul>
-
-
 </div>
+
 <div id="pagination-control" class="pagination pagination-large" data-total-pages="<%= @total_pages %>" >
   <ul>
     <li id="previous_page_button" class="<%= @current_page == 1 ? 'disabled' : '' %>">

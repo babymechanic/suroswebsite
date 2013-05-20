@@ -1,0 +1,15 @@
+<div>
+  <div class="project-display">
+    <h1> <%= @project.name.html_safe %> </h1>
+    <%= @project.description.html_safe %>
+  </div>
+  <ul class="thumbnails">
+    <li class="span4">
+      <a href="#" class="thumbnail">
+        <img data-src="holder.js/300x200" alt="" src="<%= @project.thumbnail.present? ? @project.thumbnail.url : ''%>">
+      </a>
+    </li>
+  </ul>
+</div>
+<a class="btn btn-primary" href="/projects">Go To Projects</a>
+
