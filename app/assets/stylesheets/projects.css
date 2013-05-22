@@ -25,7 +25,7 @@
 
 .pagination{
     text-align: center;
-    margin: 40px 0px 50px 0px;
+    margin: 20px 0px 50px 0px;
 }
 
 .min-height-for-items{
@@ -35,4 +35,25 @@
 .project-display{
     max-width: 800px;
     float: left;
+}
+
+#filter .heading{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#filter #filter-inner{
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#filter div #tags-to-filter-by {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#filter{
+    margin-bottom: 10px;
 }

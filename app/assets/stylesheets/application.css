@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require bootstrap.min.css
+ *= require magicsuggest-1.2.8-min.css
  *= require_tree .
  */

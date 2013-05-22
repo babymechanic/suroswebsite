@@ -1,4 +1,17 @@
 
+
+<div id='filter'>
+  <div id='filter-inner'>
+    <h3  class="heading">Remove categories you dont want to see</h3>
+    <div id="tags-to-filter-by"
+         name="tags-to-filter-by"
+         data-reference-data="<%= ProjectCategory.all_categories_as_json %>"
+         data-sort-order="displayName"
+         data-display-field="displayName"
+         data-value="<%= ProjectCategory.all_categories.map{|x|x.id}.as_json %>"></div>
+  </div>
+</div>
+
 <div class="min-height-for-items">
   <ul id="page-display-area" class="projects"  data-bind="foreach: items" data-url="/projects" data-items="<%= @projects_json %>">
     <li>
