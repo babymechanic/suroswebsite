@@ -2,11 +2,11 @@ class ProjectsController < ActionController::Base
 
   def index
     if request.xhr?
-      render :json => get_projects_as_json(params[:page].to_i)
+      render :json => get_projects(params[:page].to_i).to_json
     else
       @current_page = 1
       @total_pages = number_of_pages(Refinery::Projects::Project)
-      @projects_json = get_projects_as_json(1)
+      @projects_json = get_projects(1).to_json
       render :layout => 'application'
     end
   end
@@ -17,18 +17,18 @@ class ProjectsController < ActionController::Base
   end
 
   private
-      def get_projects_as_json(page_number)
+      def get_projects(page_number)
         projects_for = projects_for page_number
-        projects_in_json = []
+        projects = []
         projects_for.each do |project|
-          projects_in_json.push({
-                                    thumbnailUrl: project.thumbnail.present? ? project.thumbnail.url : '',
-                                    name: project.name.html_safe,
-                                    description: project.description.html_safe,
-                                    url: "/projects/#{project.id}"
-                                })
+          projects.push({
+                          thumbnailUrl: project.thumbnail.present? ? project.thumbnail.url : '',
+                          name: project.name.html_safe,
+                          description: project.description.html_safe,
+                          url: "/projects/#{project.id}"
+                      })
         end
-        projects_in_json.to_json
+        projects
       end
 
       def projects_for(page_number)
