@@ -4,13 +4,13 @@ class ProjectCategory
 
   def self.all_categories
     [
-        ProjectCategory.new(1,'Furniture Design'),
-        ProjectCategory.new(2,'Sketches'),
-        ProjectCategory.new(3,'Photography'),
-        ProjectCategory.new(4,'Spatial design'),
-        ProjectCategory.new(5,'Others'),
-        ProjectCategory.new(6,'Client Funded'),
-        ProjectCategory.new(7,'Non Client Funded')
+        ProjectCategory.new(1000,'Furniture Design'),
+        ProjectCategory.new(1001,'Sketches'),
+        ProjectCategory.new(1002,'Photography'),
+        ProjectCategory.new(1003,'Spatial design'),
+        ProjectCategory.new(1004,'Others'),
+        ProjectCategory.new(1005,'Client Commissioned'),
+        ProjectCategory.new(1006,'Non Commissioned')
     ]
   end
 

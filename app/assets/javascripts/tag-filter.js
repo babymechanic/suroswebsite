@@ -26,7 +26,7 @@ surosSite.tagFilter = function(){
 
     filter.init = function(){
         widget = tagFilter().magicSuggest({
-            width: 780,
+            width: 830,
             sortOrder: getFieldToSortBy(),
             displayField: getDisplayField(),
             value: getSelectedData(),
