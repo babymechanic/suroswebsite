@@ -161,6 +161,12 @@ surosSite.paginationControl.controller = function(){
         view.setHandlerToOnClickPrevious(onGetPrevious);
     };
 
+    controller.reset = function(){
+        surosSite.pageDisplayControl.getPage(1,function(){
+            afterDisplayingNewPage(1);
+        });
+    };
+
     return controller;
 }();
 

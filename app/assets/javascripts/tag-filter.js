@@ -24,6 +24,10 @@ surosSite.tagFilter = function(){
         return $.parseJSON(tagFilter().attr('data-reference-data'));
     };
 
+    filter.selectionChangedHandler = function(eventSource,selectedItems){
+        surosSite.paginationControl.controller.reset();
+    };
+
     filter.init = function(){
         widget = tagFilter().magicSuggest({
             width: 830,
@@ -32,6 +36,7 @@ surosSite.tagFilter = function(){
             value: getSelectedData(),
             data: getReferenceData()
         });
+        $(widget).on('selectionchange',filter.selectionChangedHandler);
     };
 
     filter.getSelectedItems = function(){
