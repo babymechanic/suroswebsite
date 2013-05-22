@@ -39,7 +39,7 @@ surosSite.tagFilter = function(){
         $.each(widget.getSelectedItems(),function(index,item){
             selectedIds.push(item.id)
         });
-        return selectedIds;
+        return selectedIds.join();
     };
 
     return filter;

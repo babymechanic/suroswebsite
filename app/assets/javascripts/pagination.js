@@ -27,7 +27,7 @@ surosSite.pageDisplayControl = function(){
 
     control.getPage = function(pageNumber,onNewPageDisplayed){
         showOverLay();
-        var url = urlToGetItems() + "?page=" + pageNumber;
+        var url = urlToGetItems() + '?page=' + pageNumber + '&tags=' + surosSite.tagFilter.getSelectedItems();
         $.ajax({
             url: url,
             type: "GET",
