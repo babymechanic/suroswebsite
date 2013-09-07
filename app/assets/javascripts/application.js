@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap.min.js
 //= require knockout-2.2.1.js
-//= require magicsuggest-1.2.8-min.js
+//= require magicsuggest-1.2.8.js
 //= require_tree .
