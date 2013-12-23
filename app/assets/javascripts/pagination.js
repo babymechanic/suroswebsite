@@ -167,6 +167,14 @@ surosSite.paginationControl.controller = function(){
         });
     };
 
+    controller.refresh = function (){
+        var dsi = "";
+        $.each(surosSite.tagFilter.getSelectedItems(),function(index,item){
+            dsi = dsi + ":" +item
+        });
+        alert(dsi);
+    };
+
     return controller;
 }();
 

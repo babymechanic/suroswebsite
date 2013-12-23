@@ -25,7 +25,7 @@ surosSite.tagFilter = function(){
     };
 
     filter.selectionChangedHandler = function(eventSource,selectedItems){
-        surosSite.paginationControl.controller.reset();
+        surosSite.paginationControl.controller.refresh();
     };
 
     filter.init = function(){
