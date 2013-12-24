@@ -57,7 +57,6 @@ surosSite.pageDisplayControl = function(){
     return control;
 }();
 
-
 surosSite.paginationControl = {};
 
 surosSite.paginationControl.view = function(){
