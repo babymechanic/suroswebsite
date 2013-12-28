@@ -6,7 +6,7 @@
         <li class='<%= "#{page_on_named_route?(:home_page) ? 'active' : '' }"%>'>
           <a id="home-page-nav-link" href="/">Home</a>
         </li>
-        <li class='dropdown <%= "#{page_on_any_named_route([:projects_all]) ? 'active' : '' }"%>'>
+        <li style="display: none" class='dropdown <%= "#{page_on_any_named_route([:projects_all]) ? 'active' : '' }"%>'>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             My Work
             <b class="caret"></b>
